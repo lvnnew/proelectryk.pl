@@ -19,6 +19,23 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder       {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder                {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder                 {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder            {opacity: 0; transition: opacity 0.3s ease;}
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -27,7 +44,6 @@ input[type="number"]:focus {
   border: none !important;
   outline: none !important;
   text-decoration: none !important;
-  text-transform: capitalize;
   font-weight: 400;
   transition: all 0.3s ease;
 }
@@ -102,6 +118,7 @@ section {
 
 .heading {
   text-align: center;
+  text-transform: uppercase;
   font-size: 4rem;
   padding: 1rem;
   padding-top: 8rem;
@@ -117,7 +134,7 @@ section {
   font-size: 3rem;
   text-transform: uppercase;
   color: white;
-  padding: 0 1rem;
+  padding: auto 2rem;
 }
 
 .brand h1:hover {
@@ -221,7 +238,7 @@ section {
   z-index: 100;
   cursor: pointer;
   transform: scale(.8);
-  margin: 1rem;
+  margin: auto 2rem;
 }
 
 #header .hamburger::after {
@@ -276,6 +293,7 @@ section {
 
 .home .content h1 {
   font-size: 5rem;
+  text-transform: none;
   color: var(--black);
 }
 
@@ -285,6 +303,7 @@ section {
 
 .home .content h3 {
   font-size: 4rem;
+  text-transform: none;
   color: var(--black);
 }
 
@@ -543,31 +562,9 @@ select {
   background: var(--black);
 }
 
-.footer p {
-  font-size: 1.5rem;
-  color: #eee;
-  padding: 1rem 0;
-}
-
-.footer .col-md-4:nth-child(1) a {
-  font-size: 3rem;
-  color: #fff;
-  margin-top: 4rem;
-}
-
-.footer .col-md-4:nth-child(1) a span {
-  color: var(--blue);
-}
-
-.footer a {
-  font-size: 2rem;
-  color: #ccc;
-  display: block;
-}
-
-.footer h3 {
-  margin-top: 4rem;
-  font-size: 3rem;
+.footer h4 {
+  margin-top: 5rem;
+  font-size: 2.5rem;
   color: #fff;
 }
 
@@ -581,8 +578,14 @@ select {
   border-top: 0.1rem solid #ccc !important;
 }
 
-.footer .credit span {
-  color: var(--blue);
+.footer .credit a{
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  color: rgb(218, 218, 218);
+}
+
+.footer .credit a:hover{
+ color: var(--blue);
 }
 
 /* footer end */
@@ -669,26 +672,6 @@ select {
   .nadaump-cinangum {
     padding: 10px 0;
     }
-
-  .pricing-table{
-    margin: 1.5rem 1.5rem;
-  }
-
-  .pricing-item{
-    background: #fff;
-    opacity: .5;
-    border-radius: 5px;
-    min-width: 100%;
-    margin: 1.5rem 1.5rem;
-    padding: 1.5rem 1.5rem;
-    align-items: center;
-    text-align: center;
-   }
-
-  header .nav-toggle {
-    top: 50%;
-    opacity: 1;
-  }
 
   table.delivery thead:first-child{
     text-align: center;

@@ -9,21 +9,25 @@ hamburger.addEventListener('click', ()=> {
     mobile_menu.classList.toggle('active');
 });
 
-document.addEventListener('scroll', () => {
-    var scroll_position = window.scrollY;
-    if (scroll_position > 250){
-        header.style.backgroundColor = '#29323c';
-    } else {
-        header.style.backgroundColor = 'transparent';
-    }
-});
-
 menu_item.forEach((item) => {
     item.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         mobile_menu.classList.toggle('active');
     });
 });
+
+// Scrolling smooth
+// This is currently only supported in the most bleeding edge browsers.
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 // accordion
 $(function(){
   $(".cusanmcig-sunantum").click(function(e){
@@ -50,20 +54,8 @@ $(function(){
       enabled:true
     }
   });
-});
 
-// Scrolling smooth
-// This is currently only supported in the most bleeding edge browsers.
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
-// For older browser support, you can use this jQuery technique
+  // For older browser support, you can use this jQuery technique
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
 
@@ -91,4 +83,5 @@ $(document).ready(function() {
 		return false;
 	});
 
+});
 });

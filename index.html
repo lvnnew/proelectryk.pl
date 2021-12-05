@@ -52,7 +52,7 @@
 <body>
     
 
-<!-- header section start -->
+<!-- header start -->
 
 <header id="header" data-aos="fade-down" data-aos-duration="300">
     <div class="header container-nav">
@@ -74,9 +74,9 @@
     </div>
 </header>
 
-<!-- header section end  -->
+<!-- header end -->
 
-<!-- home section start  -->
+<!-- home start -->
 
 <section class="home" id="home">
 
@@ -100,9 +100,9 @@
 
 </section>
 
-<!-- home section ends -->
+<!-- home ends -->
 
-<!-- about section start  -->
+<!-- about start -->
 
 <section class="about" id="about">
 
@@ -155,9 +155,9 @@
 
 </section>
 
-<!-- about section end -->
+<!-- about end -->
 
-<!-- review section start  -->
+<!-- price start -->
 
 <section class="review" id="review">
 
@@ -169,7 +169,8 @@
 
         <div id="voluptad-kacusantum">
             <div class="sacusaudan-dumantum" data-aos="fade-up" data-aos-duration="300">
-                <a href="#" class="cusanmcig-sunantum">Montaż instalacji elektrycznej<span class="toggle-icon"></span></a>
+                <a href="#" class="cusanmcig-sunantum">Instalacja okablowania
+                    <span class="toggle-icon"></span></a>
                 <div class="nadaump-cinangum">
                     <table class="delivery">
                         <thead>
@@ -506,9 +507,9 @@
 
 </section>
 
-<!-- review section end  -->
+<!-- review end -->
 
-<!-- facility section start  -->
+<!-- facility start -->
 
 <section class="facility" id="facility">
 
@@ -575,19 +576,19 @@
             </div>
 
             <div class="box" data-aos="zoom-in" data-aos-duration="300">
-                <a href="./images/img9.jpg" title="nasze prace">
+                <a href="./images/img10.jpg" title="nasze prace">
                     <img src="./images/img10.jpg" alt="">
                 </a>
             </div>
 
             <div class="box" data-aos="zoom-in" data-aos-duration="300">
-                <a href="./images/img9.jpg" title="nasze prace">
+                <a href="./images/img11.jpg" title="nasze prace">
                     <img src="./images/img11.jpg" alt="">
                 </a>
             </div>
 
             <div class="box" data-aos="zoom-in" data-aos-duration="300">
-                <a href="./images/img9.jpg" title="nasze prace">
+                <a href="./images/img12.jpg" title="nasze prace">
                     <img src="./images/img12.jpg" alt="">
                 </a>
             </div>
@@ -598,9 +599,9 @@
 
 </section>
 
-<!-- facility section end -->
+<!-- facility end -->
 
-<!-- contact section start  -->
+<!-- contact start  -->
 
 <section class="contact" id="contact">
 
@@ -631,7 +632,7 @@
 
             <div class="col-md-10" data-aos="flip-down" data-aos-duration="300">
 
-                <form>
+                <form action="#" method="post">
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="PROELECTRYK.PL">
@@ -641,10 +642,10 @@
 
                     <div class="inputBox">
                         <input type="text" placeholder="Nazwa">
-                        <input type="number" placeholder="Telefon">
+                        <input type="text" id="phone" placeholder="Telefon">
                     </div>
 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="wiadomość (opcjonalnie )"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Wiadomość"></textarea>
 
                     <input type="submit" name="" id="" value="wysłać" class="button">
 
@@ -658,19 +659,17 @@
 
 </section>
 
-<!-- contact section end -->
+<!-- contact end -->
 
-<!-- footer section start  -->
+<!-- footer start  -->
 
 <section class="footer">
 
-    <h1 class="credit text-center mx-auto">created by <span><a href="https://t.me/leshenkov">leshenkov</a></span> | all rights reserved.</h1>
+    <h4 class="credit text-center mx-auto">Zrobione <a href="https://t.me/leshenkov">LeshenkoV</a></h4>
 
 </section>
 
-<!-- footer section end -->
-
-
+<!-- footer end -->
 
 
 
@@ -687,14 +686,22 @@
 <!-- custom js link  -->
 <script src="js/main.js"></script>
 
+<script src="./js/jquery.maskedinput.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#phone").mask("+43 (99) 999-99-99");
+    });
+</script>
 
 <script>
 
+// Init AOS
 AOS.init({
     duration:1000,
-    delay:400
+    delay:300,
+    offset: 60
 })
-
 </script>
 
 </body>
